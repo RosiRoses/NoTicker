@@ -7,33 +7,56 @@ import NoteCard from '../components/NoteCard';
 import api from '../lib/axios';
 import NotesNotFound from '../components/NotesNotFound';
 
+const USE_MOCK_DATA = false;
+
 const HomePage = () => {
   const [isRateLimited, setIsRateLimited] = useState(false);
   const [notes, setNotes] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    const fetchNotes = async () => {
-      try {
-        const res = await api.get("/notes");
-        console.log(res.data);
-        setNotes(res.data);
-        setIsRateLimited(false);
-      } catch (error) {
-        console.log("Error fetching notes");
-        if(error.response?.status === 429){
-          setIsRateLimited(true);
-        }
-        else{
-          toast.error("Failed to load notes");
-          console.log(error);
-        }
-      } finally {
-        setLoading(false);
-      }
-    };
+  
 
-    fetchNotes();
+  useEffect(() => {
+  const fetchNotes = async () => {
+    try {
+      if (USE_MOCK_DATA) {
+        const mockNotes = [
+          {
+            _id: "1",
+            title: "My First Note",
+            content: "This is a test note.",
+          },
+          {
+            _id: "2",
+            title: "Shopping List",
+            content: "Milk, eggs, bread, coffee.",
+          },
+        ];
+
+        setNotes(mockNotes);
+        setIsRateLimited(false);
+        return;
+      }
+
+      const res = await api.get("/notes");
+      setNotes(res.data);
+      setIsRateLimited(false);
+
+    } catch (error) {
+      console.log("Error fetching notes", error);
+
+      if (error.response?.status === 429) {
+        setIsRateLimited(true);
+      } else {
+        toast.error("Failed to load notes");
+      }
+
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  fetchNotes();
   }, []);
 
 
@@ -62,7 +85,7 @@ const HomePage = () => {
          )} */}
 
          {loading && (
-          <div className='text-center text-primary py-10'>
+          <div className='text-center text-[#C44569] py-10'>
             Loading notes...
           </div>
         )}

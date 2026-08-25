@@ -9,6 +9,7 @@ import NoteDetailPage from "./pages/NoteDetailPage";
 
 import toast from "react-hot-toast";
 import Navbar from './components/Navbar';
+import NoteUpdatePage from './pages/NoteUpdatePage';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/" element={<HomePage/>}/>
         <Route path="/create" element={<CreatePage/>}/>
         <Route path="/note/:id" element={<NoteDetailPage/>} />
+        <Route path="/note/update/:id" element={<NoteUpdatePage/>}/>
       </Routes>
     </div>
     

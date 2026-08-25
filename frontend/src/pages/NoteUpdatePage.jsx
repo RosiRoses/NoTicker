@@ -3,10 +3,9 @@ import React, { useState, useEffect } from 'react'
 import toast from 'react-hot-toast';
 import { useNavigate, useParams, Link } from 'react-router';
 import api from "../lib/axios";
-import { formatDate } from '../lib/utils'
 
 
-const NoteDetailPage = () => {
+const NoteUpdatePage = () => {
   const [note, setNote] = useState(null);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -93,14 +92,34 @@ const NoteDetailPage = () => {
           </div>
 
           <div className='bg-[#FFD9E5] border border-base-content/10 rounded-2xl p-5 shadow-md'>
-            <h2 className='font-mono text-black font-bold text-2xl mb-4' >{note.title}</h2>
-            <p className='font-mono text-gray-700 mb-10'>{note.content}</p>
-            <p className='font-mono text-gray-700 mb-1'>{formatDate(new Date(note.createdAt))}</p>
-          </div> 
+          <h2 className='font-mono text-gray-800 text-2xl mb-4' >Update Note</h2>
+          <div className='flex flex-col'>
+            <label className='font-mono text-gray-700' for='title'>Title</label>
+            <input 
+              type="text" id='title'
+              className='mt-1 mb-3 border border-base-content/30 rounded-2xl bg-base-100 w-full p-3 placeholder:text-base-content/50' placeholder='Note Title' 
+              value={note.title}
+              onChange={(e) => setNote({ ...note, title: e.target.value })}/>
+
+            <label className='font-mono text-gray-700' for='content'>Content</label>
+            <textarea 
+              id='content'
+              className='mt-1 mb-3 border border-base-content/30 rounded-2xl bg-base-100 w-full h-36 p-3 placeholder:text-base-content/50' placeholder='Write your note here...'
+              value={note.content}
+              onChange={(e) => setNote({ ...note, content: e.target.value })}/>
+
+            <button
+              onClick={handleSave} 
+              className='btn bg-[#E696AF] translate-all duration-300 hover:bg-[#C44569] hover:border-none ml-auto '
+              disabled={saving}>
+                {saving ? "Saving..." : "Save Changes"}
+            </button>
+          </div>
+        </div> 
         </div>
       </div>
     </div>
   );
 };
 
-export default NoteDetailPage
+export default NoteUpdatePage
