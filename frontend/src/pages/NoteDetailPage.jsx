@@ -4,12 +4,12 @@ import toast from 'react-hot-toast';
 import { useNavigate, useParams, Link } from 'react-router';
 import api from "../lib/axios";
 import { formatDate } from '../lib/utils'
+import BackButton from '../components/BackButton';
 
 
 const NoteDetailPage = () => {
   const [note, setNote] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [saving, setSaving] = useState(false);
 
   const navigate = useNavigate();
 
@@ -47,25 +47,6 @@ const NoteDetailPage = () => {
     }
   };
 
-  const handleSave = async () => {
-    if (!note.title.trim() || !note.content.trim()) {
-      toast.error("Please add a title or content");
-      return;
-    }
-
-    setSaving(true);
-
-    try {
-      await api.put(`/notes/${id}`, note);
-      toast.success("Note updated successfully");
-      navigate("/");
-    } catch (error) {
-      console.log("Error saving the note:", error);
-      toast.error("Failed to update note");
-    } finally {
-      setSaving(false);
-    }
-  };
 
   if (loading) {
     return (
@@ -80,12 +61,7 @@ const NoteDetailPage = () => {
       <div className="container mx-auto px-4 py-8">
         <div className="max-w-2xl mx-auto">
           <div className="flex items-center justify-between mb-6">
-            <button className='btn bg-[#E696AF] translate-all duration-300 hover:bg-[#C44569] hover:border-none'>
-              <Link to="/" className='flex gap-2.5 items-center font-mono tracking-tighter'>
-                <ArrowLeftIcon className='size-5'/>
-                Back to Notes
-              </Link>
-            </button>
+            <BackButton/>
             <button onClick={handleDelete} className="btn btn-error btn-outline font-mono tracking-tighter">
               <Trash2Icon className="h-5 w-5" />
               Delete Note
