@@ -58,9 +58,9 @@ const NoteDetailPage = () => {
 
   return (
     <div className="min-h-screen bg-base-200">
-      <div className="container mx-auto px-4 py-8">
+      <div className="container mx-auto px-4 py-4">
         <div className="max-w-2xl mx-auto">
-          <div className="flex items-center justify-between mb-6">
+          <div className="flex items-center justify-between mb-4">
             <BackButton/>
             <button onClick={handleDelete} className="btn btn-error btn-outline font-mono tracking-tighter">
               <Trash2Icon className="h-5 w-5" />
@@ -69,9 +69,9 @@ const NoteDetailPage = () => {
           </div>
 
           <div className='bg-[#FFD9E5] border border-base-content/10 rounded-2xl p-5 shadow-md'>
-            <h2 className='font-mono text-black font-bold text-2xl mb-4' >{note.title}</h2>
-            <p className='font-mono text-gray-700 mb-10'>{note.content}</p>
-            <p className='font-mono text-gray-700 mb-1'>{formatDate(new Date(note.createdAt))}</p>
+            <h2 className='font-mono text-black font-bold text-xl lg:text-2xl mb-4' >{note.title}</h2>
+            <p className='font-mono text-gray-700 mb-10 text:sm'>{note.content}</p>
+            <p className='font-mono text-gray-700 mb-1 text-xs'>{formatDate(new Date(note.createdAt))}</p>
           </div> 
         </div>
       </div>

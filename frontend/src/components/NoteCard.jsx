@@ -41,7 +41,7 @@ const NoteCard = ({note, setNotes, onPin}) => {
                 border-t-4 
                 border-solid 
               border-[#FFD9E5] 
-                mb-3
+                mb-0
               hover:border-[#E696AF]
                 hover:shadow-lg
                 hover:-translate-y-1

@@ -130,7 +130,7 @@ const HomePage = () => {
                 </div>
                 
               </section>
-              <hr className='bg-[#E696AF] h-0.5 mb-5'></hr>
+              <hr className='bg-[#E696AF] h-0.5 mb-5 mt-6'></hr>
               </>
               
             )}
