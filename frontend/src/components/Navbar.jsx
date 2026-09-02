@@ -24,7 +24,7 @@ const Navbar = () => {
                             tracking-tight
                             transition-colors
                             duration-300
-                            group-hover:text-[#C44569]
+                            group-hover:text-[rgb(196,69,105)]
                         ">
                             NoTicker
                         </h1>
@@ -42,31 +42,35 @@ const Navbar = () => {
                 
                 
 
-                <div className='flex items-center'>
-                    {location.pathname !== "/create" && (
-                        <> 
-                            <Link to={"/create"} className='
-                                btn 
-                                bg-[#E696AF] 
-                                border-none 
-                                transition-all 
-                                duration-300 
-                                flex
-                                items-center
-                                font-mono
-                                hover:bg-[#C44569]
-                                hover:border-none
-                                group
-                                '>
-                                <PlusIcon className='size-4 lg:size-5  text-gray-800 group-hover:text-white'/>
-                                <h3 className='font-mono text-base text-gray-800 group-hover:text-white'>New Note</h3>
-                            </Link>
-                        </>)
-                    }
+                
+                
+                <Link
+                    to="/create"
+                    id='clickable'
+                    className={`btn 
+                        bg-[#E696AF] 
+                        border-none 
+                        transition-all 
+                        duration-300 
+                        flex
+                        items-center
+                        font-mono
+                        hover:bg-[#C44569]
+                        hover:border-none
+                        group
+                        ${location.pathname === "/create" ? "invisible" : ""}
+                    `}
+                >
+                    <PlusIcon className='size-4 lg:size-5 text-gray-800 group-hover:text-white' />
+                    <h3 className='font-mono text-gray-800 group-hover:text-white text-sm'>
+                        New Note
+                    </h3>
+                </Link>
+                
                 
 
                     
-                </div>
+               
             </div>
         </div>
     </header>

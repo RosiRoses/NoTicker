@@ -114,11 +114,11 @@ const CreatePage = () => {
 
   return (
     <>
-      <div className= 'min-h-screen mx-auto max-w-2xl px-4 py-8'>
-        <div className='mb-6'>
+      <div className= 'min-h-screen mx-auto max-w-2xl p-4'>
+        <div className='mb-4'>
           <BackButton/>
         </div>
-        <div className='bg-[#FFD9E5] border border-base-content/10 rounded-2xl p-5 shadow-md'>
+        <div className='bg-[#FFD9E5] border border-base-content/10 rounded-2xl p-4 shadow-md'>
           <h2 className='font-mono text-gray-800 text-2xl mb-4' >Create New Note</h2>
           <form onSubmit={handleSubmit} className='flex flex-col'>
             <label className='font-mono text-gray-700' htmlFor='title'>Title</label>
@@ -190,11 +190,11 @@ const CreatePage = () => {
               )}
             </div>
 
-            <p className='text-gray-600 mb-3'>Tip: Press ctrl + Enter to create note</p>
-
+            <p className='hidden sm:block text-gray-600 mb-3'>Tip: Press Ctrl + Enter to save changes</p>
+            
             <button
               id="submit-button"
-              type='submit' 
+              type="submit" 
               className='btn bg-[#E696AF] border-none translate-all duration-300 hover:bg-[#C44569] hover:border-none ml-auto hover:text-white'
               disabled={loading}>
                 {loading ? "Creating..." : "Create Note"}

@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-.primary-button {
-    
+body {
+    cursor: url('/cursor1.png') 4 4, auto;
 }
 
+a,
+button,
+input[type="submit"],
+input[type="button"],
+label,
+select, #clickable, #submit-button {
+    cursor: url('/pointer.png') 4 4, pointer;
+}

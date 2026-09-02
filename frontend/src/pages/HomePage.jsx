@@ -98,7 +98,7 @@ const HomePage = () => {
 
       {isRateLimited && <RateLimitUI/>}
 
-      <div className='max-w-7xl mx-auto p-4 mt-2'>
+      <div className='max-w-7xl mx-auto p-4'>
          {loading && (
           <div className='text-center text-[#C44569] py-10'>
             Loading notes...

@@ -13,7 +13,7 @@ import NoteUpdatePage from './pages/NoteUpdatePage';
 
 const App = () => {
   return (
-    <div className="relative min-h-screen w-full bg-base-100">
+    <div className="relative min-h-screen w-full bg-base-200">
       <Navbar/>
       <Routes>
         <Route path="/" element={<HomePage/>}/>

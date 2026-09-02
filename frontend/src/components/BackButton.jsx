@@ -13,6 +13,7 @@ const BackButton = () => {
       hover:bg-[#C44569] 
       hover:border-none
       hover:text-white'
+      id='clickable'
     >
       <Link to="/" className='flex gap-2.5 items-center font-mono tracking-tighter'>
         <ArrowLeftIcon className='size-5'/>
