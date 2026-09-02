@@ -87,7 +87,7 @@ const NoteDetailPage = () => {
 
             <div className='bg-[#FFD9E5] border border-base-content/10 rounded-2xl p-5 shadow-md'>
               <h2 className='font-mono text-black font-bold text-xl lg:text-2xl mb-4' >{note.title}</h2>
-              <p className='font-mono text-gray-700 mb-8 text:sm'>{note.content}</p>
+              <p className='font-mono text-gray-700 mb-8 text:xs lg:text-sm'>{note.content}</p>
             
               <div className="font-mono text-gray-700 text-xs lg:text-sm">
                 {new Date(note.updatedAt).getTime() !==
