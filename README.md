@@ -71,30 +71,30 @@ Through NoTicker, I worked with:
 ## 📸 Screenshots (Desktop)
 
 ### Home Page
-<img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/28e49be1-3759-40b2-85c8-fbd913117449" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/28e49be1-3759-40b2-85c8-fbd913117449" />
 
 ### Create Note
-<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/603c0f86-41a6-427b-8dd3-be881c2ccf70" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/603c0f86-41a6-427b-8dd3-be881c2ccf70" />
 
 ### Edit Note
-<img width="1919" height="877" alt="image" src="https://github.com/user-attachments/assets/d01dbcfc-50e0-48a5-9137-fd5980f49cf1" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/d01dbcfc-50e0-48a5-9137-fd5980f49cf1" />
 
 ### Rate Limiting Warning
-<img width="1914" height="880" alt="image" src="https://github.com/user-attachments/assets/a490224e-8566-43eb-b8eb-5c06b2b0bcf8" />
+<img width="900" alt="image" src="https://github.com/user-attachments/assets/a490224e-8566-43eb-b8eb-5c06b2b0bcf8" />
 
 ## 📸 Screenshots (Mobile)
 
 ### Home Page
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/f92a0b40-ea31-43b4-81b4-c9897741f04f" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/f92a0b40-ea31-43b4-81b4-c9897741f04f" />
 
 ### Create Note
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/599ed449-c46a-4d10-811f-f025c757ad8e" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/599ed449-c46a-4d10-811f-f025c757ad8e" />
 
 ### Edit Note
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/9f5e3c7c-907c-4cd1-82b9-d917d47dd220" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/9f5e3c7c-907c-4cd1-82b9-d917d47dd220" />
 
 ### Rate Limiting Warning
-<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/72d735e2-34c9-4fcf-8d0d-0afc96488bb1" />
+<img width="300" alt="image" src="https://github.com/user-attachments/assets/72d735e2-34c9-4fcf-8d0d-0afc96488bb1" />
 
 ## 🔮 Future Improvements
 
