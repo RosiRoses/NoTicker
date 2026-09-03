@@ -9,7 +9,7 @@ const Navbar = () => {
   return (
     <header className='bg-[#FFD9E5] border-b border-[#E696AF] rounded-b-3xl'>
         <div className='mx-auto max-w-7xl p-3 lg:p-4'>
-            <div className='flex  items-center justify-between'>
+            <div className='flex items-center justify-between'>
                 <Link to='/' className='flex items-center gap-2 group'>
                     <ScrollText className='text-gray-700                transition-colors 
                     duration-300

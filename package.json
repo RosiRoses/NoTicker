@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/RosiRoses/NoTicker/issues"
   },
-  "homepage": "https://github.com/RosiRoses/NoTicker#readme"
+  "homepage": "https://github.com/RosiRoses/NoTicker#readme",
+  "dependencies": {
+    "emoji-picker-react": "^4.19.1"
+  }
 }

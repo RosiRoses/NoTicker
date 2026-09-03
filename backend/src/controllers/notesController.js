@@ -2,7 +2,12 @@ import Note from "../models/Note.js";
 
 export async function getAllNotes(req, res) {
     try{
-        const notes = await Note.find().sort({createdAt:-1});    //newest first
+        const notes = await Note.find().sort({
+            isPinned: -1,
+            pinnedAt: -1,
+            createdAt:-1,
+        });    //newest first
+
         res.status(200).json(notes)
     } catch(error){
         console.error("Error in getAllNotes controller", error);
@@ -38,17 +43,29 @@ export async function createNote(req,res) {
 
 export async function updateNote(req,res) {
     try {
-        const {title,content} = req.body;
-        const updatedNote = await Note.findByIdAndUpdate(
-            req.params.id, 
-            {title, content},
-            {new:true,}
-        );
-        
-        if (!updatedNote) return res.status(404).json({message:"Note not found"});
-        
-        res.status(200).json({message:"Note updated successfully", updatedNote});
+        const { id } = req.params;
 
+        const note = await Note.findById(id);
+
+        if (!note) {
+            return res.status(404).json({message: "Note not found"});
+        }
+
+        const {title,content} = req.body;
+
+        const hasChanges = note.title !== title || note.content !== content;
+
+        if(!hasChanges) {
+            return res.status(200).json(note);
+        }
+
+        note.title = title;
+        note.content = content;
+
+        await note.save();
+
+        res.status(200).json(note);
+        
     } catch(error) {
         console.error("Error in updateNote controller", error);
         res.status(500).json({message: "Internal server error"});
@@ -69,3 +86,41 @@ export async function deleteNote(req,res) {
     }
 
 }
+
+export async function togglePinNote(req,res) {
+    try{
+        const {id} = req.params;
+
+        const note = await Note.findById(id);
+
+        if(!note) {
+            return res.status(404).json({
+                message: "Note not found",
+            });
+        }
+
+        if(note.isPinned) {
+            // Unpin the note
+            note.isPinned = false;
+            note.pinnedAt = null;
+        } else {
+            // Pin the note
+            note.isPinned = true;
+            note.pinnedAt = new Date();
+        }
+
+        await note.save({ timestamps: false});
+
+        res.status(200).json(note);
+
+    } catch (error) {
+        console.error("Error toggling pin:", error);
+
+        res.status(500).json({ message:"Failed to pin/unpin note", });
+    }
+
+}
+
+
+
+
