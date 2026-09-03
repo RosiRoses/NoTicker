@@ -2,8 +2,9 @@
 
 A full-stack note-taking application built with the **MERN stack**. NoTicker allows users to create, edit, delete, and organize notes through a clean and responsive interface.
 
-🔗 **Live Demo:** [Add your Render URL here]
-📦 **Repository:** [Add your GitHub repository URL here]
+🔗 **Live Demo:** [Click here](https://noticker.onrender.com)
+
+(Please wait if the website is down due to inactivity. It will start up shortly)
 
 ## ✨ Features
 
@@ -20,6 +21,7 @@ A full-stack note-taking application built with the **MERN stack**. NoTicker all
 * 🛡️ API rate limiting
 * 🔔 Toast notifications for user actions
 * 🎨 Custom UI with Tailwind CSS and DaisyUI
+* 🖱️ Custom mouse pointers
 
 ## 🛠️ Tech Stack
 
@@ -46,90 +48,8 @@ A full-stack note-taking application built with the **MERN stack**. NoTicker all
 ### Tools & Deployment
 
 * Git & GitHub
-* Postman
 * VS Code
 * Render
-
-## 📂 Project Structure
-
-```text
-NoTicker/
-├── backend/
-│   ├── controllers/
-│   ├── models/
-│   ├── routes/
-│   └── server.js
-│
-└── frontend/
-    ├── src/
-    │   ├── components/
-    │   ├── pages/
-    │   ├── lib/
-    │   └── App.jsx
-    └── package.json
-```
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-Make sure you have the following installed:
-
-* Node.js
-* npm
-* MongoDB database
-
-### 1. Clone the repository
-
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
-cd NoTicker
-```
-
-### 2. Install dependencies
-
-Install the backend dependencies:
-
-```bash
-cd backend
-npm install
-```
-
-Install the frontend dependencies:
-
-```bash
-cd ../frontend
-npm install
-```
-
-### 3. Configure environment variables
-
-Create a `.env` file in the backend directory and add the required environment variables:
-
-```env
-MONGO_URI=your_mongodb_connection_string
-UPSTASH_REDIS_REST_URL=your_upstash_redis_url
-UPSTASH_REDIS_REST_TOKEN=your_upstash_redis_token
-PORT=5001
-```
-
-### 4. Start the backend
-
-```bash
-cd backend
-npm run dev
-```
-
-### 5. Start the frontend
-
-In another terminal:
-
-```bash
-cd frontend
-npm run dev
-```
-
-The application will then be available at the local development URL shown by Vite.
 
 ## 🎯 What I Built / Learned
 
@@ -148,21 +68,41 @@ Through NoTicker, I worked with:
 * Deploying a full-stack application
 * Working with Git and GitHub
 
-## 📸 Screenshots
+## 📸 Screenshots (Desktop)
 
-*Add screenshots of the application here.*
+### Home Page
+<img width="1919" height="880" alt="image" src="https://github.com/user-attachments/assets/28e49be1-3759-40b2-85c8-fbd913117449" />
+
+### Create Note
+<img width="1919" height="875" alt="image" src="https://github.com/user-attachments/assets/603c0f86-41a6-427b-8dd3-be881c2ccf70" />
+
+### Edit Note
+<img width="1919" height="877" alt="image" src="https://github.com/user-attachments/assets/d01dbcfc-50e0-48a5-9137-fd5980f49cf1" />
+
+### Rate Limiting Warning
+<img width="1914" height="880" alt="image" src="https://github.com/user-attachments/assets/a490224e-8566-43eb-b8eb-5c06b2b0bcf8" />
+
+## 📸 Screenshots (Mobile)
+
+### Home Page
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/f92a0b40-ea31-43b4-81b4-c9897741f04f" />
+
+### Create Note
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/599ed449-c46a-4d10-811f-f025c757ad8e" />
+
+### Edit Note
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/9f5e3c7c-907c-4cd1-82b9-d917d47dd220" />
+
+### Rate Limiting Warning
+<img width="738" height="1600" alt="image" src="https://github.com/user-attachments/assets/72d735e2-34c9-4fcf-8d0d-0afc96488bb1" />
 
 ## 🔮 Future Improvements
 
 Possible future improvements include:
 
-* User authentication and individual user accounts
 * Search and filtering
 * Note categories/tags
 * Dark mode
 * Rich-text editing
 * Improved note organization
 
-## 📄 License
-
-This project is for educational and portfolio purposes.
